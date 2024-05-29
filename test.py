@@ -1,24 +1,33 @@
 import requests
 
 def get_user_input():
+    def validate_name(name):
+        # Check if all characters are alphabetic or spaces
+        return all(char.isalpha() or char.isspace() for char in name)
+
     while True:
         name = input("Enter your name: ")
-        if not isinstance(name, str) or not name.isalpha():
-            print("Invalid input, letters only, please try again.")
-            continue
+        if isinstance(name, str) and validate_name(name):
+            break
+        else:
+            print("Invalid input, letters and spaces only, please try again.")
 
+    while True:
         age = input("Enter your age: ")
-        if not age.isdigit():
+        if age.isdigit():
+            age = int(age)
+            break
+        else:
             print("Invalid input, numbers only, please try again.")
-            continue
-        age = int(age)
-        
-        mood = input("Enter your mood/emotion: ")
-        if not isinstance(mood, str) or not mood.isalpha():
-            print("Invalid input, letters only, please try again.")
-            continue
 
-        return name, age, mood
+    while True:
+        mood = input("Enter your mood/emotion: ")
+        if isinstance(mood, str) and mood.isalpha():
+            break
+        else:
+            print("Invalid input, letters only, please try again.")
+
+    return name, age, mood
 
 def test_microservice(name, age, mood):
     url = 'http://127.0.0.1:5000/user'
