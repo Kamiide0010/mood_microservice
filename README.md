@@ -18,12 +18,12 @@ To request data from the microservice, use the following JSON format:
 
 **Example Call**
 
-![image](https://github.com/Kamiide0010/mood_microservice/assets/102687528/54d2788b-781b-470c-8a05-0740bd2eb7ee)
+![image](https://github.com/Kamiide0010/mood_microservice/assets/102687528/e57cd088-5c80-4866-9122-448529c29692)
 
 
 **Example of Receiving Data**
 
-![image](https://github.com/Kamiide0010/mood_microservice/assets/102687528/ce52e932-0e08-4466-be14-042e9c999919)
+![image](https://github.com/Kamiide0010/mood_microservice/assets/102687528/eff331a6-7710-4fc8-b559-8041ecc691e8)
 
 
 
